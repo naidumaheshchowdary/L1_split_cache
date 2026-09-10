@@ -1,0 +1,90 @@
+
+
+
+
+module SplitL1_TB;
+
+  logic mode, Clk = 0, rst = 0;
+  bit dp = 0;
+  logic [3:0] cmd;
+  logic [31:0] Trace_address;
+  int filename;
+  string tracefile, traceline;
+  int readfile;
+
+  Data_cache DC_dut ( 
+	.mode(mode), 
+	.dp(dp),
+	.Clk(Clk), 
+	.rst(rst), 
+	.cmd(cmd), 
+	.data_read(data_read), 
+	.data_write(data_write), 
+	.data_hit(data_hit), 
+	.data_miss(data_miss), 
+	.Trace_address(Trace_address) 
+	);
+
+  Inst_cache IC_dut ( 
+	.mode(mode),
+	.dp(dp), 
+	.Clk(Clk), 
+	.rst(rst), 
+	.cmd(cmd), 	
+	.I_read(I_read), 
+	.I_write(I_write), 
+	.I_hit(I_hit), 
+	.I_miss(I_miss), 	
+	.Trace_address(Trace_address) 
+	);
+
+  always 
+	begin 
+	#5 Clk =~ Clk; 
+	end
+
+  initial
+    begin
+	//Applying reset
+      Clk = 0;
+      rst = 1;
+      Clk = 1;
+      rst = 0;
+     //Opening trace file (file name tracefile1.txt)
+      if ($value$plusargs("Tracefile=%s", tracefile))
+      filename = $fopen(tracefile,"r"); // reading the values in the file 
+      
+      if(filename==0)
+        begin
+          $display("Error: The Trace File not found");
+          $stop;
+        end
+
+      if ($test$plusargs("Mode"))
+    	mode=0;
+      else
+    	mode=1;
+
+      while(!$feof(filename)) begin
+        @(negedge Clk) 
+
+          readfile = $fgets( traceline , filename );
+          $display("Value : %s",traceline); // displaying the value from trace file
+
+          readfile = $sscanf(traceline,"%d %h", cmd, Trace_address);
+	// Handling Invalid value in the trace file
+          if(readfile != 2)
+            begin
+              $display("Incorrect trace filename format it has invalid line.");
+              cmd=4'bx;
+            end
+        end
+      $fclose(filename);
+	dp = 1; // enable dp value to display the result
+      #100
+      $stop;
+    end
+endmodule
+
+
+

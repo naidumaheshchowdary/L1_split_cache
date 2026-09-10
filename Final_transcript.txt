@@ -1,0 +1,129 @@
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 12:53:19 on Mar 13,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 12:53:19 on Mar 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:53:21 on Mar 13,2025, Elapsed time: 0:09:22
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 12:53:21 on Mar 13,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 1 481C7631
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <481c7631>
+# Data Cache : Write to L2 <481c7631>
+# Value : 1 481C7631
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 0 582C7632
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <582c7632>
+# Value : 0 594C7615
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <594c7615>
+# Value : 0 621C7600
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <621c7600>
+# Value : 1 111C762C
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <111c762c>
+# Data Cache : Write to L2 <111c762c>
+# Value : 9 0000
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 0 and SET NUMBER = 0
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# LRU[3] = x | LRU[2] = x | LRU[1] = x | LRU[0] = x
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 0
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 0
+# data_miss and data_hit is zero
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 0 and SET NUMBER = 0
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 3
+# Total Number of data_write = 3
+# Total Number of data_hit   = 1
+# Total Number of data_miss = 5
+# DATA CACHE HIT ratio = 16.666667
+# Value : 
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 0 and SET NUMBER = 0
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# LRU[3] = x | LRU[2] = x | LRU[1] = x | LRU[0] = x
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 0
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 0
+# data_miss and data_hit is zero
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 0 and SET NUMBER = 0
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 3
+# Total Number of data_write = 3
+# Total Number of data_hit   = 1
+# Total Number of data_miss = 5
+# DATA CACHE HIT ratio = 16.666667
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 235 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85

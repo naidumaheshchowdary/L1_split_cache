@@ -1,0 +1,3031 @@
+# //  Questa Sim-64
+# //  Version 2024.2 linux_x86_64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# vsim .gui 
+# Start time: 22:09:28 on Mar 14,2025
+# ** Error (suppressible): (vsim-19) Failed to access library '' at "".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 22:09:29 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:17:06 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:17:06 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:17:06 on Mar 14,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): /u/maheshn/ECE585/Project/Testbench.sv(55): (vopt-7063) Failed to find 'tracefile1' in hierarchical name 'tracefile1'.
+#         Region: SplitL1_TB
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 6
+vi run.do
+# [?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"run.do" 8L, 325C[1;1Hvlib work
+#vlog -reportprogress 300 -work work Data_Cache.sv +acc
+#vlog -reportprogress 300 -work work Instruction_Cache.sv +acc
+#vlog -reportprogress 300 -work work Testbench.sv +acc
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/*.sv
+# vsim -voptargs="+acc" work.SplitL1_TB +Tracefile=tracefile1.txt
+# run -all
+# 
+# [1m[34m~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[24;1H[m[?1l>[?1049lVim: Error reading input, exiting...
+# Vim: Finished.
+# [24;1HVim: Warning: Output is not to a terminal
+# Vim: Warning: Input is not from a terminal
+# 
+do run.doq
+# Cannot open macro file: run.doq
+ls -rlt
+# total 183
+# -r--r--r--. 1 maheshn them    744 Mar  1  2024 dmv_tracefile.txt
+# -rw-------. 1 maheshn them      0 Mar  8 05:27 etch32024
+# -rw-------. 1 maheshn them 102763 Mar  8 05:51 L1_Split_cache.mpf
+# -rw-------. 1 maheshn them      1 Mar  8 06:01 L1_Split_cache.cr.mti
+# -rw-------. 1 maheshn them      0 Mar 10 00:03 etch11344
+# -rw-------. 1 maheshn them  40960 Mar 12 23:55 vsim.wlf
+# -rw-------. 1 maheshn them 103687 Mar 13 00:09 L1 Split cache.mpf
+# -rw-------. 1 maheshn them   1111 Mar 13 00:09 L1 Split cache.cr.mti
+# -rw-------. 1 maheshn them      0 Mar 13 00:27 etch27457
+# -rwxrwxrwx. 1 maheshn them     52 Mar 13 10:27 tracefile1.txt.bak
+# -rwxrwxrwx. 1 maheshn them  22854 Mar 13 10:33 Data_cache.sv.bak
+# -rwxrwxrwx. 1 maheshn them   1744 Mar 13 11:49 Testbench.sv.bak
+# -rwxrwxrwx. 1 maheshn them  10427 Mar 13 12:24 Instructions_cache.sv.bak
+# -rwxrwxrwx. 1 maheshn them    325 Mar 13 12:28 run.do
+# -rwxrwxrwx. 1 maheshn them  22795 Mar 13 12:35 Data_cache.sv
+# -rw-------. 1 maheshn them   5547 Mar 13 12:54 Final_transcript.txt
+# -rw-------. 1 maheshn them      0 Mar 14 22:09 etch6161
+# -rwxrwxrwx. 1 maheshn them  10426 Mar 14 22:15 Instructions_cache.sv
+# -rwxrwxrwx. 1 maheshn them   1742 Mar 14 22:16 Testbench.sv
+# drwx------. 7 maheshn them     13 Mar 14 22:17 work
+# -rw-------. 1 maheshn them   4550 Mar 14 22:17 transcript
+vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:17:38 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# 
+# Top level modules:
+# 	Data_cache
+# End time: 22:17:38 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Instructions_cache.sv
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:17:38 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Instructions_cache.sv 
+# -- Compiling module Inst_cache
+# 
+# Top level modules:
+# 	Inst_cache
+# End time: 22:17:38 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Testbench.sv
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:17:38 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:17:38 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=\"+acc\" +Tracefile=tracefile1.txt work.SplitL1_TB
+# vsim -voptargs=""+acc"" "+Tracefile=tracefile1.txt" work.SplitL1_TB 
+# Start time: 22:17:06 on Mar 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Error (suppressible): /u/maheshn/ECE585/Project/Testbench.sv(55): (vopt-7063) Failed to find 'tracefile1' in hierarchical name 'tracefile1'.
+#         Region: SplitL1_TB
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 6
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:18:14 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:18:15 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:17:06 on Mar 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vopt-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=3.
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tracefile1.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : /u/maheshn/ECE585/Project/Testbench.sv(55)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Error: The Trace File not found
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(60)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 60
+vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:20:41 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# 
+# Top level modules:
+# 	Data_cache
+# End time: 22:20:42 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Instructions_cache.sv
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:20:42 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Instructions_cache.sv 
+# -- Compiling module Inst_cache
+# 
+# Top level modules:
+# 	Inst_cache
+# End time: 22:20:42 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Testbench.sv
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:20:42 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:20:42 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=\"+acc\" +Tracefile=tracefile1.txt work.SplitL1_TB
+# End time: 22:20:55 on Mar 14,2025, Elapsed time: 0:03:49
+# Errors: 2, Warnings: 4
+# vsim -voptargs=""+acc"" "+Tracefile=tracefile1.txt" work.SplitL1_TB 
+# Start time: 22:20:55 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tracefile1.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : /u/maheshn/ECE585/Project/Testbench.sv(55)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Error: The Trace File not found
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(60)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 60
+# Break key hit
+quit -sim
+# End time: 22:22:03 on Mar 14,2025, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 1
+# Loading project Split_L1
+# Compile of Data_cache.sv was successful.
+# Compile of Instructions_cache.sv was successful.
+# Compile of Testbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:23:11 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:23:11 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:23:11 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tracefile1.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : /u/maheshn/ECE585/Project/Testbench.sv(55)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Error: The Trace File not found
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(60)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 60
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:23:47 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:23:48 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 22:23:49 on Mar 14,2025, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 7
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:23:49 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tracefile1.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : /u/maheshn/ECE585/Project/Testbench.sv(55)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Error: The Trace File not found
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(60)
+#    Time: 0 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 60
+mv tracefile.txt tracefile1.txt
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:24:39 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:24:40 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 22:24:41 on Mar 14,2025, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:24:41 on Mar 14,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 0 984DE132
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <984de132>
+# Value : 0 116DE12F
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <116de12f>
+# Value : 0 100DE130
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <100de130>
+# Value : 0 999DE12E
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <999de12e>
+# Value : 0 645DE10A
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <645de10a>
+# Value : 0 846DE107
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <846de107>
+# Value : 0 211DE128
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <211de128>
+# Value : 0 777DE133
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <777de133>
+# Value : 0 999DE132
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 116DE123
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 666DE135
+# 
+# -----TAG BITS DONT MATCH - MISS-----
+# Value : 1 333DE12C
+# 
+# -----TAG BITS DONT MATCH - MISS-----
+# Value : 0 846DE10C
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 3 777DE136
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Return to L2 <777de136>
+#  
+# Value : 8  ABCDE128
+# 
+# Value : 0 777DE136
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <777de136>
+# Value : 1 ABCDE128
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <abcde128>
+# Data Cache : Write to L2 <abcde128>
+# Value : 1 777DE136
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 ABCDE128
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 0 116DE101
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <116de101>
+# Value : 1 100DE101
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <100de101>
+# Data Cache : Write to L2 <100de101>
+# Value : 1 AAADE101
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <aaade101>
+# Data Cache : Write to L2 <aaade101>
+# Value : 1 EDCDE101
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <edcde101>
+# Data Cache : Write to L2 <edcde101>
+# Value : 2 116DE12F
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <116de12f>
+#  
+# Value : 2 100DE130
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <100de130>
+#  
+# Value : 2 999DE12E
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <999de12e>
+#  
+# Value : 2 645DE10A
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <645de10a>
+#  
+# Value : 2 846DE107
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Write to L2 <846de107>
+# Read from L2 <846de107>
+# Value : 2 116DE12F
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Write to L2 <116de12f>
+# Read from L2 <116de12f>
+# Value : 4 AAADE101
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Return to L2 <aaade101>
+# Data Cache : Read for Ownership from L2 <aaade101>
+# Value : 9 846DE107
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 846de107 and SET NUMBER = 14212
+# TAG[3] = 645 | TAG[2] = 999 | TAG[1] = 116 | TAG[0] = 846
+# STATE[3] = Exclusive | STATE[2] = Exclusive | STATE[1] = Exclusive | STATE[0] = Exclusive
+# LRU[3] = 1 | LRU[2] = 0 | LRU[1] = 3 | LRU[0] = 2
+# VALID[3] = 1 | VALID[2] = 1 | VALID[1] = 1 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 6
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 12
+# Instruction Cache HIT ratio = 0.000000
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 846de107 and SET NUMBER = 3784
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = edc | TAG[4] = aaa | TAG[3] = 100 | TAG[2] = 116 | TAG[1] = abc | TAG[0] = 777
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 7 | LRU[4] = 7 | LRU[3] = 7 | LRU[2] = 7 | LRU[1] = 7 | LRU[0] = 7
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Modified | STATE[4] = Invalid | STATE[3] = Modified | STATE[2] = Exclusive | STATE[1] = Modified | STATE[0] = Modified
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 1 | DIRTY[4] = 1 | DIRTY[3] = 1 | DIRTY[2] = 0 | DIRTY[1] = 1 | DIRTY[0] = 1
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 1 | VALID[4] = 0 | VALID[3] = 1 | VALID[2] = 1 | VALID[1] = 1 | VALID[0] = 1
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 12
+# Total Number of data_write = 7
+# Total Number of data_hit   = 5
+# Total Number of data_miss = 16
+# DATA CACHE HIT ratio = 23.809524
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 846de107 and SET NUMBER = 14212
+# TAG[3] = 645 | TAG[2] = 999 | TAG[1] = 116 | TAG[0] = 846
+# STATE[3] = Exclusive | STATE[2] = Exclusive | STATE[1] = Exclusive | STATE[0] = Exclusive
+# LRU[3] = 1 | LRU[2] = 0 | LRU[1] = 3 | LRU[0] = 2
+# VALID[3] = 1 | VALID[2] = 1 | VALID[1] = 1 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 6
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 12
+# Instruction Cache HIT ratio = 0.000000
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 846de107 and SET NUMBER = 3784
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = edc | TAG[4] = aaa | TAG[3] = 100 | TAG[2] = 116 | TAG[1] = abc | TAG[0] = 777
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 7 | LRU[4] = 7 | LRU[3] = 7 | LRU[2] = 7 | LRU[1] = 7 | LRU[0] = 7
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Modified | STATE[4] = Invalid | STATE[3] = Modified | STATE[2] = Exclusive | STATE[1] = Modified | STATE[0] = Modified
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 1 | DIRTY[4] = 1 | DIRTY[3] = 1 | DIRTY[2] = 0 | DIRTY[1] = 1 | DIRTY[0] = 1
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 1 | VALID[4] = 0 | VALID[3] = 1 | VALID[2] = 1 | VALID[1] = 1 | VALID[0] = 1
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 12
+# Total Number of data_write = 7
+# Total Number of data_hit   = 5
+# Total Number of data_miss = 16
+# DATA CACHE HIT ratio = 23.809524
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 415 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+# Error opening /u/maheshn/ECE585/Project/tracefile.txt
+# Path name '/u/maheshn/ECE585/Project/tracefile.txt' doesn't exist.
+# Error opening /u/maheshn/ECE585/Project/tracefile.txt
+# Path name '/u/maheshn/ECE585/Project/tracefile.txt' doesn't exist.
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:27:40 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:27:40 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:27:42 on Mar 14,2025, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:27:42 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 2 408ed4
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 10019d94
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <10019d94>
+# Value : 2 408ed8
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 10019d88
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408edc
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 10013220
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <10013220>
+# Value : 2 408ee0
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408ee4
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230b8
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <100230b8>
+# Data Cache : Write to L2 <100230b8>
+# Value : 2 408ee8
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 10013220
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408eec
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408ef0
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408ef4
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 10013220
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Write to L2 <10013220>
+# Value : 2 408ef8
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230bc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408efc
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230c0
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <100230c0>
+# Data Cache : Write to L2 <100230c0>
+# Value : 2 408f00
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 7ffd8bec
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <7ffd8bec>
+# Value : 2 408f04
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f08
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f0c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f10
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f14
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f18
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f1c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f20
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230d0
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230cc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230c8
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230c4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f38
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 100230c4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f3c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f40
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f44
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f48
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f4c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f50
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 408f50 and SET NUMBER = 573
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# LRU[3] = x | LRU[2] = x | LRU[1] = x | LRU[0] = x
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 0
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 188
+# Instruction Cache HIT ratio = 0.000000
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 408f50 and SET NUMBER = 23d
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 5
+# Total Number of data_write = 9
+# Total Number of data_hit   = 9
+# Total Number of data_miss = 5
+# DATA CACHE HIT ratio = 64.285714
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 715 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:30:17 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:30:17 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:30:19 on Mar 14,2025, Elapsed time: 0:02:37
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:30:19 on Mar 14,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 2 408ed4
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 10019d94
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <10019d94>
+# Value : 2 408ed8
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 10019d88
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408edc
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 10013220
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <10013220>
+# Value : 2 408ee0
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408ee4
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230b8
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <100230b8>
+# Data Cache : Write to L2 <100230b8>
+# Value : 2 408ee8
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 10013220
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408eec
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408ef0
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408ef4
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 10013220
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Write to L2 <10013220>
+# Value : 2 408ef8
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230bc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408efc
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230c0
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <100230c0>
+# Data Cache : Write to L2 <100230c0>
+# Value : 2 408f00
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 7ffd8bec
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <7ffd8bec>
+# Value : 2 408f04
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f08
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f0c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f10
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f14
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f18
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f1c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f20
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230d0
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230cc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230c8
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f24
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f28
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 1 100230c4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f34
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f38
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 0 100230c4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f3c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f40
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f44
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f48
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f4c
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 2 408f50
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 408f50 and SET NUMBER = 573
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# LRU[3] = x | LRU[2] = x | LRU[1] = x | LRU[0] = x
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 0
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 188
+# Instruction Cache HIT ratio = 0.000000
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 408f50 and SET NUMBER = 23d
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 5
+# Total Number of data_write = 9
+# Total Number of data_hit   = 9
+# Total Number of data_miss = 5
+# DATA CACHE HIT ratio = 64.285714
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 715 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:33:10 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Error: (vlog-13069) /u/maheshn/ECE585/Project/Instructions_cache.sv(25): near "=": syntax error, unexpected '='.
+# -- Compiling module SplitL1_TB
+# End time: 22:33:11 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# ** Error: /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 5
+# /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/*.sv"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:33:39 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:33:39 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:33:41 on Mar 14,2025, Elapsed time: 0:03:22
+# Errors: 1, Warnings: 2
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:33:41 on Mar 14,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vopt-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 2 408ed4
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <408ed4>
+#  
+# Value : 0 10019d94
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <10019d94>
+# Value : 2 408ed8
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 10019d88
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408edc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 0 10013220
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <10013220>
+# Value : 2 408ee0
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408ee4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 100230b8
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <100230b8>
+# Data Cache : Write to L2 <100230b8>
+# Value : 2 408ee8
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 0 10013220
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408eec
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408ef0
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408ef4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 10013220
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Write to L2 <10013220>
+# Value : 2 408ef8
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 100230bc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408efc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 100230c0
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <100230c0>
+# Data Cache : Write to L2 <100230c0>
+# Value : 2 408f00
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <408f00>
+#  
+# Value : 0 7ffd8bec
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <7ffd8bec>
+# Value : 2 408f04
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f08
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f0c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f10
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f14
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f18
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f1c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f20
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f24
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f28
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 100230d0
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f34
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f24
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f28
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 100230cc
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f34
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f24
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f28
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 100230c8
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f34
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f24
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f28
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f2c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 1 100230c4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f30
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f34
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f38
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 0 100230c4
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f3c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f40
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <408f40>
+#  
+# Value : 2 408f44
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f48
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f4c
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 408f50
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 408f50 and SET NUMBER = 573
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = 4
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = Shared
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 3
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 47
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 44
+# Total Number of Inst_miss = 3
+# Instruction Cache HIT ratio = 93.617021
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 408f50 and SET NUMBER = 23d
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 5
+# Total Number of data_write = 9
+# Total Number of data_hit   = 9
+# Total Number of data_miss = 5
+# DATA CACHE HIT ratio = 64.285714
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 715 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:36:37 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:36:37 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:36:38 on Mar 14,2025, Elapsed time: 0:02:57
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:36:38 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 0 12345678
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <12345678>
+# Value : 0 24345678
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <24345678>
+# Value : 0 39845673
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <39845673>
+# Value : 0 83445673
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <83445673>
+# Value : 0 48545678
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <48545678>
+# Value : 0 24345671
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 0 45745673
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <45745673>
+# Value : 0 37145679
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <37145679>
+# Value : 0 d9e4567f
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <d9e4567f>
+# Value : 0 afe45679
+# 
+# -----TAG BITS DONT MATCH - MISS-----
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 2 12345678
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <12345678>
+#  
+# Value : 2 24345678
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <24345678>
+#  
+# Value : 2 39845673
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <39845673>
+#  
+# Value : 2 83445673
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <83445673>
+#  
+# Value : 2 48545678
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Write to L2 <48545678>
+# Read from L2 <48545678>
+# Value : 2 24345671
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 2 45745673
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Write to L2 <45745673>
+# Read from L2 <45745673>
+# Value : 2 37145679
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Write to L2 <37145679>
+# Read from L2 <37145679>
+# Value : 2 d9e4567f
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Write to L2 <d9e4567f>
+# Read from L2 <d9e4567f>
+# Value : 2 afe45679
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Write to L2 <afe45679>
+# Read from L2 <afe45679>
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 3 45745673
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Return to L2 <45745673>
+#  
+# Value : 3 37145679
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Return to L2 <37145679>
+#  
+# Value : 3 d9e4567f
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# -------Communication with L2-------
+# Data Cache : Return to L2 <d9e4567f>
+#  
+# Value : 3 afe45679
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 8
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = afe45679 and SET NUMBER = 4441
+# TAG[3] = 371 | TAG[2] = 457 | TAG[1] = afe | TAG[0] = d9e
+# STATE[3] = Exclusive | STATE[2] = Exclusive | STATE[1] = Exclusive | STATE[0] = Exclusive
+# LRU[3] = 1 | LRU[2] = 0 | LRU[1] = 3 | LRU[0] = 2
+# VALID[3] = 1 | VALID[2] = 1 | VALID[1] = 1 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 10
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 25
+# Instruction Cache HIT ratio = 3.846154
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = afe45679 and SET NUMBER = 1159
+# TAG[7] = d9e | TAG[6] = 371 | TAG[5] = 457 | TAG[4] = 485 | TAG[3] = 834 | TAG[2] = 398 | TAG[1] = 243 | TAG[0] = 123
+# LRU[7] = 7 | LRU[6] = 7 | LRU[5] = 7 | LRU[4] = 7 | LRU[3] = 7 | LRU[2] = 7 | LRU[1] = 7 | LRU[0] = 7
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Invalid | STATE[4] = Exclusive | STATE[3] = Exclusive | STATE[2] = Exclusive | STATE[1] = Shared | STATE[0] = Exclusive
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 1 | VALID[3] = 1 | VALID[2] = 1 | VALID[1] = 1 | VALID[0] = 1
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 0
+# Total Number of data_hit   = 1
+# Total Number of data_miss = 10
+# DATA CACHE HIT ratio = 9.090909
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 395 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:38:51 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:38:52 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 22:38:53 on Mar 14,2025, Elapsed time: 0:02:15
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:38:53 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 0 847DE198
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <847de198>
+# Value : 0 722DE323
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <722de323>
+# Value : 0 401DE268
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <401de268>
+# Value : 0 386DE170
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <386de170>
+# Value : 0 269DE972
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <269de972>
+# Value : 0 241DE661
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <241de661>
+# Value : 0 992DE271
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <992de271>
+# Value : 0 434DE709
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de709>
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 0 434DE958
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de958>
+# Value : 1 992DE880
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <992de880>
+# Data Cache : Write to L2 <992de880>
+# Value : 2 269DE915
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <269de915>
+#  
+# Value : 1 570DE383
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <570de383>
+# Data Cache : Write to L2 <570de383>
+# Value : 1 553DE321
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <553de321>
+# Data Cache : Write to L2 <553de321>
+# Value : 2 333DE896
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <333de896>
+#  
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 3 333DE896
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Value : 2 333DE880
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 4 269DE915
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Cache for address <269de915> is miss, hence snooping an Read for Ownership(RFO) from other processor isn't possible.
+# Value : 9 553DE938
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 553de938 and SET NUMBER = 14244
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = 269
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = Exclusive
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 3
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 553de938 and SET NUMBER = 37a4
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 3
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 14
+# DATA CACHE HIT ratio = 0.000000
+# Value : 1 363DE999
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <363de999>
+# Data Cache : Write to L2 <363de999>
+# Value : 8 722DE323
+# 
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 722de323 and SET NUMBER = 14220
+# TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 722de323 and SET NUMBER = 378c
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = 0 | TAG[4] = 0 | TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Invalid | STATE[4] = Invalid | STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 4
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 15
+# DATA CACHE HIT ratio = 0.000000
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 335 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:43:29 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Error: /u/maheshn/ECE585/Project/Data_cache.sv(310): (vlog-2730) Undefined variable: 'first_write_through'.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# End time: 22:43:29 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 5
+# /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/*.sv"
+# Compile of Data_cache.sv was successful.
+# Compile of Instructions_cache.sv was successful.
+# Compile of Testbench.sv was successful.
+# 3 compiles, 0 failed with no errors.
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:44:10 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:44:10 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:44:12 on Mar 14,2025, Elapsed time: 0:05:19
+# Errors: 1, Warnings: 2
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:44:12 on Mar 14,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vopt-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vopt-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 0 847DE198
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <847de198>
+# Value : 0 722DE323
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <722de323>
+# Value : 0 401DE268
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <401de268>
+# Value : 0 386DE170
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <386de170>
+# Value : 0 269DE972
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <269de972>
+# Value : 0 241DE661
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <241de661>
+# Value : 0 992DE271
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <992de271>
+# Value : 0 434DE709
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de709>
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 0 434DE958
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de958>
+# Value : 1 992DE880
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <992de880>
+# Data Cache : Write to L2 <992de880>
+# Value : 2 269DE915
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <269de915>
+#  
+# Value : 1 570DE383
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <570de383>
+# Data Cache : Write to L2 <570de383>
+# Value : 1 553DE321
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <553de321>
+# Data Cache : Write to L2 <553de321>
+# Value : 2 333DE896
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <333de896>
+#  
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 3 333DE896
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Value : 2 333DE880
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 4 269DE915
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Cache for address <269de915> is miss, hence snooping an Read for Ownership(RFO) from other processor isn't possible.
+# Value : 9 553DE938
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 553de938 and SET NUMBER = 14244
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = 269
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = Exclusive
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 3
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 553de938 and SET NUMBER = 37a4
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 3
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 14
+# DATA CACHE HIT ratio = 0.000000
+# Value : 1 363DE999
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <363de999>
+# Data Cache : Write to L2 <363de999>
+# Value : 8 722DE323
+# 
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 722de323 and SET NUMBER = 14220
+# TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 722de323 and SET NUMBER = 378c
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = 0 | TAG[4] = 0 | TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Invalid | STATE[4] = Invalid | STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 4
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 15
+# DATA CACHE HIT ratio = 0.000000
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 335 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:48:02 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Error: /u/maheshn/ECE585/Project/Data_cache.sv(275): (vlog-2730) Undefined variable: 'valid_bit_count'.
+# ** Error: /u/maheshn/ECE585/Project/Data_cache.sv(427): (vlog-2730) Undefined variable: 'valid_bit_count'.
+# -- Compiling module Inst_cache
+# ** Error: /u/maheshn/ECE585/Project/Instructions_cache.sv(131): (vlog-2730) Undefined variable: 'valid_bit_count'.
+# -- Compiling module SplitL1_TB
+# End time: 22:48:02 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 5
+# /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/*.sv"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:48:44 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Error: /u/maheshn/ECE585/Project/Data_cache.sv(341): (vlog-2730) Undefined variable: 'valid_bit_count'.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# End time: 22:48:44 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+# Error in macro ./run.do line 5
+# /pkgs/mentor/questa/2024.2/questasim/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/*.sv"
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:49:01 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:49:02 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 22:49:03 on Mar 14,2025, Elapsed time: 0:04:51
+# Errors: 2, Warnings: 2
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:49:03 on Mar 14,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vopt-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vopt-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 0 847DE198
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <847de198>
+# Value : 0 722DE323
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <722de323>
+# Value : 0 401DE268
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <401de268>
+# Value : 0 386DE170
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <386de170>
+# Value : 0 269DE972
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <269de972>
+# Value : 0 241DE661
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <241de661>
+# Value : 0 992DE271
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <992de271>
+# Value : 0 434DE709
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de709>
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 0 434DE958
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de958>
+# Value : 1 992DE880
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <992de880>
+# Data Cache : Write to L2 <992de880>
+# Value : 2 269DE915
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <269de915>
+#  
+# Value : 1 570DE383
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <570de383>
+# Data Cache : Write to L2 <570de383>
+# Value : 1 553DE321
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <553de321>
+# Data Cache : Write to L2 <553de321>
+# Value : 2 333DE896
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <333de896>
+#  
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 3 333DE896
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Value : 2 333DE880
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 4 269DE915
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Cache for address <269de915> is miss, hence snooping an Read for Ownership(RFO) from other processor isn't possible.
+# Value : 9 553DE938
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 553de938 and SET NUMBER = 14244
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = 269
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = Exclusive
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 3
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 553de938 and SET NUMBER = 37a4
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 3
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 14
+# DATA CACHE HIT ratio = 0.000000
+# Value : 1 363DE999
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <363de999>
+# Data Cache : Write to L2 <363de999>
+# Value : 8 722DE323
+# 
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 722de323 and SET NUMBER = 14220
+# TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 722de323 and SET NUMBER = 378c
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = 0 | TAG[4] = 0 | TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Invalid | STATE[4] = Invalid | STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 4
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 15
+# DATA CACHE HIT ratio = 0.000000
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 335 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:50:17 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:50:17 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:50:19 on Mar 14,2025, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:50:19 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 0 847DE198
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <847de198>
+# Value : 0 722DE323
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <722de323>
+# Value : 0 401DE268
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <401de268>
+# Value : 0 386DE170
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <386de170>
+# Value : 0 269DE972
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <269de972>
+# Value : 0 241DE661
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <241de661>
+# Value : 0 992DE271
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <992de271>
+# Value : 0 434DE709
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de709>
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 0 434DE958
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de958>
+# Value : 1 992DE880
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <992de880>
+# Data Cache : Write to L2 <992de880>
+# Value : 2 269DE915
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <269de915>
+#  
+# Value : 1 570DE383
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <570de383>
+# Data Cache : Write to L2 <570de383>
+# Value : 1 553DE321
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <553de321>
+# Data Cache : Write to L2 <553de321>
+# Value : 2 333DE896
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <333de896>
+#  
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 3 333DE896
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Value : 2 333DE880
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 4 269DE915
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Cache for address <269de915> is miss, hence snooping an Read for Ownership(RFO) from other processor isn't possible.
+# Value : 9 553DE938
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 553de938 and SET NUMBER = 14244
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = 269
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = Exclusive
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 3
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 553de938 and SET NUMBER = 37a4
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 3
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 14
+# DATA CACHE HIT ratio = 0.000000
+# Value : 1 363DE999
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <363de999>
+# Data Cache : Write to L2 <363de999>
+# Value : 8 722DE323
+# 
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 0 847DE198
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <847de198>
+# Value : 0 722DE323
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <722de323>
+# Value : 0 401DE268
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <401de268>
+# Value : 0 386DE170
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <386de170>
+# Value : 0 269DE972
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <269de972>
+# Value : 0 241DE661
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <241de661>
+# Value : 0 992DE271
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <992de271>
+# Value : 0 434DE709
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de709>
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 0 434DE958
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de958>
+# Value : 1 992DE880
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <992de880>
+# Data Cache : Write to L2 <992de880>
+# Value : 2 269DE915
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <269de915>
+#  
+# Value : 1 570DE383
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <570de383>
+# Data Cache : Write to L2 <570de383>
+# Value : 1 553DE321
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <553de321>
+# Data Cache : Write to L2 <553de321>
+# Value : 2 333DE896
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <333de896>
+#  
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 3 333DE896
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Value : 2 333DE880
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 4 269DE915
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Cache for address <269de915> is miss, hence snooping an Read for Ownership(RFO) from other processor isn't possible.
+# Value : 9 553DE938
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 553de938 and SET NUMBER = 14244
+# TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 269
+# STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Exclusive
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 3
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 6
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 2
+# Total Number of Inst_miss = 4
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 553de938 and SET NUMBER = 37a4
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = 0 | TAG[4] = 0 | TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Invalid | STATE[4] = Invalid | STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 18
+# Total Number of data_write = 7
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 29
+# DATA CACHE HIT ratio = 0.000000
+# Value : 1 363DE999
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <363de999>
+# Data Cache : Write to L2 <363de999>
+# Value : 8 722DE323
+# 
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 722de323 and SET NUMBER = 14220
+# TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 6
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 2
+# Total Number of Inst_miss = 4
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 722de323 and SET NUMBER = 378c
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = 0 | TAG[4] = 0 | TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Invalid | STATE[4] = Invalid | STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 18
+# Total Number of data_write = 8
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 30
+# DATA CACHE HIT ratio = 0.000000
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 565 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:51:20 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:51:20 on Mar 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:51:22 on Mar 14,2025, Elapsed time: 0:01:03
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:51:22 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 1 481C7631
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <481c7631>
+# Data Cache : Write to L2 <481c7631>
+# Value : 1 481C7631
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 0 582C7632
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <582c7632>
+# Value : 0 594C7615
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <594c7615>
+# Value : 0 621C7600
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <621c7600>
+# Value : 1 111C762C
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <111c762c>
+# Data Cache : Write to L2 <111c762c>
+# Value : 9 0000
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 0 and SET NUMBER = 0
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 0
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 0
+# data_miss and data_hit is zero
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 0 and SET NUMBER = 0
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 3
+# Total Number of data_write = 3
+# Total Number of data_hit   = 1
+# Total Number of data_miss = 5
+# DATA CACHE HIT ratio = 16.666667
+# Value : 
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 0 and SET NUMBER = 0
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 0
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 0
+# Total Number of Inst_miss = 0
+# data_miss and data_hit is zero
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 0 and SET NUMBER = 0
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 3
+# Total Number of data_write = 3
+# Total Number of data_hit   = 1
+# Total Number of data_miss = 5
+# DATA CACHE HIT ratio = 16.666667
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 185 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:58:17 on Mar 14,2025
+# vlog -reportprogress 300 -work work /u/maheshn/ECE585/Project/Data_cache.sv /u/maheshn/ECE585/Project/Instructions_cache.sv /u/maheshn/ECE585/Project/Testbench.sv 
+# -- Compiling module Data_cache
+# ** Note: /u/maheshn/ECE585/Project/Data_cache.sv(26): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module Inst_cache
+# ** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(25): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+# -- Compiling module SplitL1_TB
+# 
+# Top level modules:
+# 	SplitL1_TB
+# End time: 22:58:18 on Mar 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 22:58:19 on Mar 14,2025, Elapsed time: 0:06:57
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" work.SplitL1_TB "+Tracefile=tracefile1.txt" 
+# Start time: 22:58:19 on Mar 14,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.SplitL1_TB(fast)
+# Loading work.Data_cache(fast)
+# Loading work.Inst_cache(fast)
+# Value : 0 847DE198
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <847de198>
+# Value : 0 722DE323
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <722de323>
+# Value : 0 401DE268
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <401de268>
+# Value : 0 386DE170
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <386de170>
+# Value : 0 269DE972
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <269de972>
+# Value : 0 241DE661
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <241de661>
+# Value : 0 992DE271
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <992de271>
+# Value : 0 434DE709
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de709>
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 0 434DE958
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# ------Communication with L2------
+# Data Cache : Read from L2 <434de958>
+# Value : 1 992DE880
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <992de880>
+# Data Cache : Write to L2 <992de880>
+# Value : 2 269DE915
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <269de915>
+#  
+# Value : 1 570DE383
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <570de383>
+# Data Cache : Write to L2 <570de383>
+# Value : 1 553DE321
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <553de321>
+# Data Cache : Write to L2 <553de321>
+# Value : 2 333DE896
+# 
+# ------TAG BITS DONT MATCH, HENCE MISS-------
+# --Communication with L2--
+# Read from L2 <333de896>
+#  
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 3 333DE896
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Value : 2 333DE880
+# 
+# ------TAG BITS MATCH, HENCE HIT-------
+# Value : 4 269DE915
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# Cache for address <269de915> is miss, hence snooping an Read for Ownership(RFO) from other processor isn't possible.
+# Value : 9 553DE938
+# 
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 553de938 and SET NUMBER = 14244
+# TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = 269
+# STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = Exclusive
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 3
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 1
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 553de938 and SET NUMBER = 37a4
+# TAG[7] = x | TAG[6] = x | TAG[5] = x | TAG[4] = x | TAG[3] = x | TAG[2] = x | TAG[1] = x | TAG[0] = x
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] =  | STATE[6] =  | STATE[5] =  | STATE[4] =  | STATE[3] =  | STATE[2] =  | STATE[1] =  | STATE[0] = 
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 3
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 14
+# DATA CACHE HIT ratio = 0.000000
+# Value : 1 363DE999
+# 
+# -----TAG BITS DON'T MATCH - MISS-----
+# --------------Communication with L2--------------
+# Data Cache : Read for Ownership(RFO) from L2 <363de999>
+# Data Cache : Write to L2 <363de999>
+# Value : 8 722DE323
+# 
+# Value : 9
+# 
+# Incorrect trace filename format it has invalid line.
+# Value : 
+# Incorrect trace filename format it has invalid line.
+# ---------------Contents of INSTRUCTION CACHE---------------
+# TRACE Address = 722de323 and SET NUMBER = 14220
+# TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------INSTRUCTION CACHE statistics---------------
+# Total Number of Inst_read  = 3
+# Total Number of Inst_write = 0
+# Total Number of Inst_hit   = 1
+# Total Number of Inst_miss = 2
+# Instruction Cache HIT ratio = 33.333333
+# ---------------Contents of DATA CACHE---------------
+# TRACE ADDRESS = 722de323 and SET NUMBER = 378c
+# TAG[7] = 0 | TAG[6] = 0 | TAG[5] = 0 | TAG[4] = 0 | TAG[3] = 0 | TAG[2] = 0 | TAG[1] = 0 | TAG[0] = 0
+# LRU[7] = 0 | LRU[6] = 0 | LRU[5] = 0 | LRU[4] = 0 | LRU[3] = 0 | LRU[2] = 0 | LRU[1] = 0 | LRU[0] = 0
+# STATE[7] = Invalid | STATE[6] = Invalid | STATE[5] = Invalid | STATE[4] = Invalid | STATE[3] = Invalid | STATE[2] = Invalid | STATE[1] = Invalid | STATE[0] = Invalid
+# DIRTY[7] = 0 | DIRTY[6] = 0 | DIRTY[5] = 0 | DIRTY[4] = 0 | DIRTY[3] = 0 | DIRTY[2] = 0 | DIRTY[1] = 0 | DIRTY[0] = 0
+# VALID[7] = 0 | VALID[6] = 0 | VALID[5] = 0 | VALID[4] = 0 | VALID[3] = 0 | VALID[2] = 0 | VALID[1] = 0 | VALID[0] = 0
+# ---------------DATA CACHE statistics---------------
+# Total Number of data_read  = 9
+# Total Number of data_write = 4
+# Total Number of data_hit   = 0
+# Total Number of data_miss = 15
+# DATA CACHE HIT ratio = 0.000000
+# ** Note: $stop    : /u/maheshn/ECE585/Project/Testbench.sv(85)
+#    Time: 335 ns  Iteration: 0  Instance: /SplitL1_TB
+# Break in Module SplitL1_TB at /u/maheshn/ECE585/Project/Testbench.sv line 85
+# End time: 19:03:50 on Mar 15,2025, Elapsed time: 20:05:31
+# Errors: 0, Warnings: 1

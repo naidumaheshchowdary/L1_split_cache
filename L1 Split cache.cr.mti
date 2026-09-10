@@ -1,0 +1,24 @@
+/u/maheshn/ECE585/Project/Testbench.sv {1 {vlog -work work -vopt -sv -stats=none /u/maheshn/ECE585/Project/Testbench.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module SplitL1Cache_tesbench
+
+Top level modules:
+	SplitL1Cache_tesbench
+
+} {} {}} /u/maheshn/ECE585/Project/Instructions_cache.sv {1 {vlog -work work -vopt -sv -stats=none /u/maheshn/ECE585/Project/Instructions_cache.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module instruction_cache
+** Note: /u/maheshn/ECE585/Project/Instructions_cache.sv(27): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+
+Top level modules:
+	instruction_cache
+
+} {} {}} /u/maheshn/ECE585/Project/Data_cache.sv {1 {vlog -work work -vopt -sv -stats=none /u/maheshn/ECE585/Project/Data_cache.sv
+QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module data_cache
+** Note: /u/maheshn/ECE585/Project/Data_cache.sv(23): (vlog-13177) Promoting concatenation '{default:0}' to an assignment pattern:  Named element found.
+
+Top level modules:
+	data_cache
+
+} {} {}}

@@ -1,0 +1,258 @@
+
+module Inst_cache #(
+  parameter AddressBits = 32,		// Number of Address Bits
+  parameter Sets = 16*1024,		// Total number of SETS
+  parameter Ways = 4,			// Total number of WAYS
+  parameter Bytelines = 64,	// Width of cache line in bytes
+  parameter ByteOffsetBit = $clog2 (Bytelines),	// Number of byte offset bits
+  parameter IndexBits = $clog2 (Sets),	// Number of byte offset bits
+  parameter Tagbits = AddressBits - (ByteOffsetBit + IndexBits),	// Number of TAG bits
+  parameter LRUbits = $clog2 (Ways))
+(
+
+  input logic mode, Clk, rst,
+  input bit dp,
+  input logic [3:0]  cmd,       								// from trace file
+  input logic [31:0] Trace_address,	  								// Address from trace file
+
+  output real I_read, I_write, I_hit, I_miss
+);
+
+ 
+
+  real Inst_hit_ratio; 									
+
+  logic [LRUbits-1:0] LRU[Sets-1:0][Ways-1:0] = {default:2'b00};				// LRU bits per cache line - Default set to 00
+  logic [Tagbits-1:0] TAG[Sets-1:0][Ways-1:0];// TAG bits per cache line
+  bit valid[Sets-1:0][Ways-1:0]; 
+  bit FWT [Sets -1: 0] [Ways-1:0]; // Flag for first write-through
+
+  typedef enum logic [3:0] {
+		Modified = 4'b0000, Exclusive=4'b0001, 
+		Shared=4'b0010, Invalid=4'b0011
+	} st;
+  st MESI[Sets-1 : 0][Ways-1:0]; // MESI stores the cache line's state: Modified, Exclusive, Shared, or Invalid.
+
+  int exit=0;
+  int valid_count = 0;
+
+  logic [ByteOffsetBit- 1 :0] byte_offset;
+  logic [IndexBits-1 :0] set_index;
+  logic [Tagbits -1 :0] tag_index;
+
+  assign byte_offset = Trace_address [ByteOffsetBit-1 :0];
+  assign set_index = Trace_address [ByteOffsetBit + IndexBits-1 :ByteOffsetBit];
+  assign tag_index = Trace_address [AddressBits-1: ByteOffsetBit + IndexBits];
+ 
+  always@(dp)
+  begin
+  Inst_Output();
+  Inst_report();
+  end 
+  
+  always_ff @(posedge Clk or posedge rst)
+    begin
+      if(rst)
+        begin
+          I_read = 0;
+          I_write = 0;
+          I_hit = 0;
+          I_miss = 0;
+          foreach (MESI [x,y])
+            begin
+              TAG[x][y]=0;
+              MESI[x][y] = Invalid;
+              LRU[x][y] = 2'b00;
+              FWT [x][y] = 0;
+              valid[x][y] = 0;
+            end
+        end
+      else
+        begin
+          if (cmd != 0 && cmd != 1 && cmd != 3 && cmd != 4)
+            begin
+
+              case(cmd)
+                2:
+                  begin
+                    exit = 0;
+                    for(int m=0 ; m<4; m++) //4ways
+                      begin
+                        if(valid[set_index][m] == 1)
+                          valid_count = valid_count + 1;
+
+                        ///////////////************************************ IF TAG BITS MATCH - HIT *********************************/////////////////////
+                        if((exit==0 && valid[set_index][m] == 1) && ( TAG[set_index][m] == tag_index))
+                          begin
+                            exit = 1;
+                            I_hit = I_hit+1;
+                            $display("------TAG BITS MATCH, HENCE HIT-------");
+
+                            //////////////////////////////--------------------MODIFIED STATE-----------------------///////////////////////////////////
+
+                            if (MESI[set_index][m] == Modified)
+                              begin
+                                if (cmd == 2) 				// Read  request to L1 data cache
+                                  begin
+                                    MESI[set_index][m] = Modified;
+                                    I_read = I_read+1;
+                                    LRU_Updated(m);
+                                  end
+                              end
+
+                            //////////////////////////////--------------------EXCLUSIVE STATE-----------------------///////////////////////////////////
+
+                            else if (MESI[set_index][m] == Exclusive)
+                              begin
+                                if (cmd == 2) 				// Read  request to L1 data cache
+                                  begin
+                                    MESI[set_index][m] = Shared;
+                                    I_read = I_read+1;
+                                    LRU_Updated(m);
+                                  end
+                              end
+
+                            //////////////////////////////--------------------SHARED STATE-----------------------///////////////////////////////////
+
+                            else if (MESI[set_index][m] == Shared)
+                              begin
+                                if (cmd == 2) 				// Read  request to L1 data cache
+                                  begin
+                                    MESI[set_index][m] = Shared;
+                                    I_read = I_read+1;
+                                    LRU_Updated(m);
+                                  end
+			      end 
+                          end
+
+                        ///////////////************************************ IF TAGS BITS DON'T MATCH - MISS *********************************/////////////////////
+
+
+                        if((valid_count < 4) && (exit == 0)) // 4wyas
+                          begin
+                            I_miss = I_miss+1;
+                            $display("------TAG BITS DONT MATCH, HENCE MISS-------");
+                            for(int k=0; k <= Ways-1; k++) // 4ways
+                              begin
+                                if(exit==0 && LRU[set_index][k] == 0 && valid[set_index][k] == 0)
+                                  begin
+                                    exit = 1;
+
+                                    if(cmd == 2)
+                                      begin
+                                        MESI[set_index][k] = Exclusive;
+                                        I_read = I_read+1;
+                                        LRU_Updated(k);
+                                        TAG[set_index][k] = tag_index;
+                                        valid[set_index][k] = 1;
+                                        if(mode == 1'b1)
+                                          begin
+                                            $display("--Communication with L2--");
+                                            $display("Read from L2 <%0h>", Trace_address);
+                                            $display(" ");
+                                          end
+                                      end
+                                  end
+                              end
+                          end
+
+                        if((valid_count==Ways) && (exit == 0))
+                          begin
+                            I_miss = I_miss+1;
+                            $display("------TAG BITS DONT MATCH, HENCE MISS-------");
+                            for(int n=0; n<=3; n++)
+                              begin
+                                if(exit==0 && LRU [set_index][n] == 0)
+                                  begin
+                                    exit = 1;
+
+                                    if(cmd == 2)
+                                      begin
+                                        MESI[set_index][n] = Exclusive;
+                                        I_read = I_read+1;
+                                        LRU_Updated(n);
+                                        TAG[set_index][n] = tag_index;
+                                        valid[set_index][n] = 1;
+                                        if(mode == 1'b1)
+                                          begin
+                                            $display("--Communication with L2--");
+                                            $display("Write to L2 <%0h>", Trace_address);
+					    $display("Read from L2 <%0h>", Trace_address);
+                                          end
+                                      end
+                                  end
+                              end
+                          end
+                      end
+                  end
+
+                8:
+
+                  begin
+                    foreach (MESI [x,y])
+                      begin
+                        TAG[x][y] = 0;
+                        MESI[x][y] = Invalid;
+                        LRU[x][y] = 0;
+                        FWT[x][y] = 0;
+                        valid[x][y] = 0;
+                      end
+                  end
+
+                9:
+
+                  begin
+                    Inst_Output();
+                    Inst_report();
+                  end
+              endcase
+            end
+        end
+      exit=0;
+      valid_count=0;
+    end
+
+function void LRU_Updated;
+    input int p;
+    for( int q =0 ; q <= 3 ; q++ ) // 4 ways
+      begin
+        if(q != p)
+          begin
+            if (LRU [set_index] [q] > LRU [set_index] [p])
+	       LRU [set_index] [q] = LRU [set_index] [q]-1;
+          end
+      end
+    LRU [set_index] [p] = Ways-1;
+  endfunction
+
+  function void Inst_report;
+    $display("---------------INSTRUCTION CACHE statistics---------------");
+    $display("Total Number of Inst_read  = %0d", I_read);
+    $display("Total Number of Inst_write = %0d", I_write);
+    $display("Total Number of Inst_hit   = %0d", I_hit);
+    $display("Total Number of Inst_miss = %0d", I_miss);
+    if (I_hit+I_miss == 0)
+      $display ("data_miss and data_hit is zero");
+    else
+      begin
+        Inst_hit_ratio = ( I_hit / ( I_hit + I_miss ) )*100;
+        $display("Instruction Cache HIT ratio = %f", Inst_hit_ratio);
+        
+      end
+  endfunction
+
+  function void Inst_Output;
+    $display("---------------Contents of INSTRUCTION CACHE---------------");
+    $display("TRACE Address = %0h and SET NUMBER = %0d", Trace_address, set_index);
+    $display("TAG[3] = %0h | TAG[2] = %0h | TAG[1] = %0h | TAG[0] = %0h", TAG[set_index][3], TAG[set_index][2], TAG[set_index][1], TAG[set_index][0]);
+    $display("STATE[3] = %0d | STATE[2] = %0d | STATE[1] = %0d | STATE[0] = %0d" , MESI[set_index][3].name, MESI[set_index][2].name, MESI[set_index][1].name, MESI[set_index][0].name);
+    $display("LRU[3] = %0d | LRU[2] = %0d | LRU[1] = %0d | LRU[0] = %0d", LRU[set_index][3], LRU[set_index][2], LRU[set_index][1], LRU[set_index][0]);
+    $display("VALID[3] = %0d | VALID[2] = %0d | VALID[1] = %0d | VALID[0] = %0d", valid[set_index][3], valid[set_index][2], valid[set_index][1], valid[set_index][0]);
+
+  endfunction
+endmodule
+
+
+
+
+
